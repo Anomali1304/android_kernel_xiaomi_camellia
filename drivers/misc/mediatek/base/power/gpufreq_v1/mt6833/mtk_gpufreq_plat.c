@@ -3083,8 +3083,8 @@ static void __mt_gpufreq_init_table(void)
 	unsigned int i = 0;
 
 	/* determine max_opp/num/segment_table... by segment  */
-	if (segment_id == MT6833_SEGMENT)    /* 5G-C */
-		g_segment_max_opp_idx = 11;
+	if (segment_id == MT6833_SEGMENT)    /* 5G-C: enable signed-off OPPs through 1068 MHz */
+		g_segment_max_opp_idx = 0;
 	else if (segment_id == MT6833M_SEGMENT)    /* 5G-CM */
 		g_segment_max_opp_idx = 24;
 	else if (segment_id == MT6833T_SEGMENT)    /* 5G-C+ */
